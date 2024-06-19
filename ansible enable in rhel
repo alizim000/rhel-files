@@ -1,0 +1,12 @@
+- First register your system to RHSM:
+# subscription-manager register
+
+- Attach your Red Hat Ansible Automation Platform subscription.  This command will help you find the Red Hat Ansible Automation Platform subscription:
+# subscription-manager list --available
+
+- Grab the pool id of the subscription and run the following:
+# subscription-manager attach --pool=<pool id here of ansible subscription>
+
+- Enable the Red Hat Ansible Engine Repository:
+# subscription-manager repos --enable rhel-7-server-ansible-2-rpms
+# subscription-manager repos --enable ansible-2-for-rhel-8-x86_64-rpms
